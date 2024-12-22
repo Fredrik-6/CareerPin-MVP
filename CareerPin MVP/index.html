@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerPin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CareerPin</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="navigateTo('home')">Home</a></li>
+                <li><a href="#" onclick="navigateTo('profile')">Profile</a></li>
+                <li><a href="#" onclick="navigateTo('dashboard')">Dashboard</a></li>
+                <li><a href="#" onclick="navigateTo('roadmap')">Career Roadmap</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="page active">
+            <h2>Welcome to CareerPin</h2>
+            <p>Your journey to career success starts here.</p>
+            <button onclick="navigateTo('profile')">Get Started</button>
+        </section>
+
+        <section id="profile" class="page">
+            <h2>Create Your Profile</h2>
+            <form onsubmit="navigateTo('dashboard'); return false;">
+                <label for="skills">Skills:</label>
+                <input type="text" id="skills" placeholder="e.g., Coaching, Cooking, Data Analysis">
+                <br><br>
+                <label for="goals">Career Goals:</label>
+                <input type="text" id="goals" placeholder="e.g., Role, Salary, Location, Job Type">
+                <br><br>
+                <label for="Interests">Your Interests:</label>
+                <input type="text" id="interests" placeholder="e.g., Art, Sports, Animals">
+                <br><br>
+                <label for="Qualification Type">Qualification type:</label>
+                <input type="text" id="qualification-type" placeholder="e.g., A Level, BSc, BA, MSc">
+                <label for="Qualifications">Your Qualifications:</label>
+                <input type="text" id="Qualification" placeholder="e.g., course, certifications">
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="dashboard" class="page">
+            <h2>Job Dashboard</h2>
+            <p>Here are some job recommendations:</p>
+            <ul>
+                <li>Data Analyst - London</li>
+                <li>Junior Python Developer - Remote</li>
+                <li>Business Intelligence Analyst - Manchester</li>
+            </ul>
+            <button onclick="navigateTo('roadmap')">View Career Roadmap</button>
+        </section>
+
+        <section id="roadmap" class="page">
+            <h2>Career Roadmap</h2>
+            <h3>Data Analyst</h3>
+            <div class="roadmap-content">
+                <div class="roadmap-left">
+                    <img src="how-to-become-data-analyst.png" alt="Career Roadmap Visual" class="roadmap-image">
+                    <p class="roadmap-description">
+                        This roadmap is designed to help students or graduates take their first steps toward becoming a Data Analyst. It starts by introducing key concepts in data analytics and suggests building knowledge in tools like Excel, SQL, and Python. These tools are widely used by companies to organise and analyse data.
+                        <br><br>
+                        Once you’ve gained some basic skills, the next step is to apply them through hands-on projects. These projects can show potential employers that you can solve real-world problems. Building a portfolio with your best work is a great way to demonstrate your abilities.
+                        <br><br>
+                        The roadmap also highlights the importance of networking with professionals and improving communication skills to present your insights effectively. By following these steps, you’ll be prepared to apply for entry-level Data Analyst roles and start your career with confidence.
+                        <br><br>
+                        Lorem ipsum odor amet, consectetuer adipiscing elit. Lacinia aliquet mollis elementum placerat tristique ligula nec quisque. Ex sagittis vehicula et, parturient hendrerit malesuada. Suspendisse senectus imperdiet scelerisque habitant convallis ante; curabitur donec aliquam? Orci malesuada purus ante lacinia litora. Facilisi facilisi netus nostra lobortis montes tellus eros odio sollicitudin.
+                    </p>
+                </div>
+                <div class="roadmap-right">
+                    <div class="chatbox">
+    <h3>AI Career Assistant</h3>
+    <div class="chatbox-messages">
+        <p>Hello! How can I assist you with your career journey?</p>
+    </div>
+    <div class="chatbox-input">
+        <input type="text" placeholder="Type your message..." disabled>
+        <button disabled>Send</button>
+    </div>
+</div>
+                    <img src="data-analyst-skills.jpg" alt="Data Analyst Skills" class="roadmap-side-image">
+                    <img src="avg-data-analyst-salary-reed.png" alt="Average Data Analyst Salary" class="roadmap-side-image">
+                </div>
+            </div>
+            <button onclick="navigateTo('dashboard')">Back to Dashboard</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CareerPin</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
